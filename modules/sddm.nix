@@ -8,7 +8,10 @@ let
 in {
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = false; 
+    wayland = {
+      enable = true;
+      compositor = "kwin";
+    }; 
     autoNumlock = true;
     enableHidpi = true;
     theme = "sddm-astronaut-theme";
