@@ -8,27 +8,29 @@ let
 in {
   services.displayManager.sddm = {
     enable = true;
-    wayland = {
-      enable = true;
-      compositor = "weston";
-    };
+    wayland.enable = false; 
     autoNumlock = true;
     enableHidpi = true;
     theme = "sddm-astronaut-theme";
+
+    extraPackages = with pkgs; [
+      custom-sddm-astronaut
+      nordzy-cursor-theme # KĽÚČOVÉ: SDDM ho musí mať tu, aby ho videl!
+      kdePackages.qtsvg
+    ];
+
     settings = {
       Theme = {
         Current = "sddm-astronaut-theme";
-        CursorTheme = "Bibata-Modern-Ice";
+        CursorTheme = "Nordzy-cursors"; # Názov čiernej/tmavej témy
         CursorSize = 24;
       };
     };
-    extraPackages = with pkgs; [
-      custom-sddm-astronaut
-    ];
   };
 
   environment.systemPackages = with pkgs; [
     custom-sddm-astronaut
     kdePackages.qtmultimedia
+    nordzy-cursor-theme # KĽÚČOVÉ: Aby bol dostupný aj pre Hyprland
   ];
 }

@@ -4,4 +4,5 @@
     layout = "us";
     variant = "";
   };
+  services.xserver.enable = true;
 }
