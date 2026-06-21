@@ -9,5 +9,6 @@
     ./setting.nix
     ./network.nix
     ./locales.nix
+    ./cursor.nix
   ];
 }

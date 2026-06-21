@@ -1,5 +1,9 @@
 { cofig, pkgs, ... }:
 {
+  imports [
+    ./ags.nix
+  ];
+
   home = {
     username = "stano";
     homeDirectory = "/home/stano";
