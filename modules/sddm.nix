@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, theme, ... }:
 
 let
   custom-sddm-astronaut = pkgs.sddm-astronaut.override {
@@ -18,14 +18,14 @@ in {
 
     extraPackages = with pkgs; [
       custom-sddm-astronaut
-      nordzy-cursor-theme # KĽÚČOVÉ: SDDM ho musí mať tu, aby ho videl!
+      nordzy-cursor-theme
       kdePackages.qtsvg
     ];
 
     settings = {
       Theme = {
         Current = "sddm-astronaut-theme";
-        CursorTheme = "Nordzy-cursors"; # Názov čiernej/tmavej témy
+        CursorTheme = "Nordzy-cursors";
         CursorSize = 24;
       };
     };
@@ -34,6 +34,6 @@ in {
   environment.systemPackages = with pkgs; [
     custom-sddm-astronaut
     kdePackages.qtmultimedia
-    nordzy-cursor-theme # KĽÚČOVÉ: Aby bol dostupný aj pre Hyprland
+    nordzy-cursor-theme
   ];
 }
