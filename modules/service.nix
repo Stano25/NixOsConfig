@@ -1,8 +1,9 @@
 { pkgs, ... }:
 {
   services.xserver.xkb = {
-    layout = "us";
+    layout = "sk";
     variant = "";
   };
+  console.useXkbConfig = true;
   services.xserver.enable = true;
 }
