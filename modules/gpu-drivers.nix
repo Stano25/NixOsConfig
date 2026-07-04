@@ -30,7 +30,7 @@
 
   # Premenné pre Hyprland a Wayland
   environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "iHD";
     XDG_SESSION_TYPE = "wayland";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";

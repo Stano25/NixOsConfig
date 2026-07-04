@@ -1,6 +1,6 @@
 # home/ags.nix
 { inputs, pkgs, ... }: {
-  
+
   # Naimportujeme domovský modul z flake vstupu AGS
   imports = [
     inputs.ags.homeManagerModules.default

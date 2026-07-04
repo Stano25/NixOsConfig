@@ -2,6 +2,9 @@
 
 {
   services.auto-cpufreq.enable = true;
+
+  services.power-profiles-daemon.enable = false;
+
   services.auto-cpufreq.settings = {
     battery = {
        governor = "powersave";
@@ -14,9 +17,4 @@
   };
   # Intel procesor nastavenie
   services.thermald.enable = true;
-
-  # Power profiles daemon (aby si ho mohol ovládať cez AGS)
-  # POZOR: Niektoré systémy sa bijú s auto-cpufreq, ak to nepôjde,
-  # použi len jedno z nich.
-  services.power-profiles-daemon.enable = true;
 }

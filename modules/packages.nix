@@ -9,13 +9,15 @@
 
   programs.fish.enable = true;
 
+  services.flatpak.enable = true;
+
   environment.systemPackages = with pkgs; [
     git
     vim
     zed-editor
-    firefox
     fastfetch
     kitty
     fish
+    hyprpaper
   ];
 }

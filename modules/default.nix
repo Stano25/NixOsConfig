@@ -9,5 +9,7 @@
     ./setting.nix
     ./network.nix
     ./locales.nix
+    ./gpu-drivers.nix
+    ./power.nix
   ];
 }
