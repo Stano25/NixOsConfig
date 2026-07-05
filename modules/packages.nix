@@ -16,8 +16,10 @@
     vim
     zed-editor
     fastfetch
-    kitty
-    fish
     hyprpaper
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.iosevka
   ];
 }
